@@ -14,15 +14,32 @@
                 "https://mrdoob.com/lab/javascript/effects/water/02/https://mrdoob.com/lab/javascript/effects/water/02/",
                 "https://hackertyper.com/",
                 "https://pointerpointer.com/",
-                "https://www.duolingo.com/"
+                "https://www.duolingo.com/",
+                "https://zoomquilt.org/",
+                "https://asoftmurmur.com/",
+                "https://thisissand.com/",
+                "https://www.musictheory.net/",
+                "https://www.internetlivestats.com/",
+                "https://stellarium-web.org/",
+                "http://weavesilk.com/",
+                "https://www.mapcrunch.com/",
+                "https://quickdraw.withgoogle.com/",
+                "https://radio.garden/"
             ];
             var randomIndex = Math.floor(Math.random() * sites.length);
-            document.getElementById("embedFrame").src = sites[randomIndex];
+            var selectedSite = sites[randomIndex];
+
+            if (selectedSite === "https://www.duolingo.com/") {
+                window.open(selectedSite, '_blank');
+            } else {
+                document.getElementById("embedFrame").src = selectedSite;
+            }
         }
     </script>
 </head>
 <body onload="randomEmbed()">
     <h1>Random Site</h1>
     <iframe id="embedFrame" width="100%" height="600px" src=""></iframe>
+    <p>(Refresh your page to get a new site)</p>
 </body>
 </html>
