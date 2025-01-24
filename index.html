@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Embedded Site</title>
+    <script type="text/javascript">
+        function randomEmbed() {
+            var sites = [
+                "https://puginarug.com/",
+                "http://chihuahuaspin.com/",
+                "https://mrdoob.com/lab/javascript/effects/solitaire/",
+                "https://mrdoob.com/projects/chromeexperiments/ball-pool/",
+                "https://mrdoob.com/projects/harmony/",
+                "https://papertoilet.com/",
+                "https://mrdoob.com/lab/javascript/effects/water/02/https://mrdoob.com/lab/javascript/effects/water/02/",
+                "https://hackertyper.com/",
+                "https://pointerpointer.com/",
+                "https://www.duolingo.com/"
+            ];
+            var randomIndex = Math.floor(Math.random() * sites.length);
+            document.getElementById("embedFrame").src = sites[randomIndex];
+        }
+    </script>
+</head>
+<body onload="randomEmbed()">
+    <h1>Random Site</h1>
+    <iframe id="embedFrame" width="100%" height="600px" src=""></iframe>
+</body>
+</html>
